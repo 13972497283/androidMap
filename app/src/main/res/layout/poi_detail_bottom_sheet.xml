@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/poi_detail_bottom"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/radius_top_bg"
+    android:orientation="vertical"
+    android:visibility="visible"
+    app:behavior_hideable="true"
+    app:behavior_peekHeight="80dp"
+    app:layout_behavior="@string/bottom_sheet_behavior">
+
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginLeft="@dimen/padding_size"
+        android:layout_marginTop="@dimen/padding_size"
+        android:layout_marginRight="@dimen/padding_size"
+        android:layout_marginBottom="@dimen/padding_size">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="34dp"
+            android:gravity="center_vertical"
+            android:text="我的位置"
+            android:textAppearance="@android:style/TextAppearance.Medium"
+            android:textColor="@color/poi_detail_title"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/iv_close"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:background="@drawable/close_selector"
+            app:layout_constraintBottom_toBottomOf="@id/tv_title"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_title" />
+
+
+        <TextView
+            android:id="@+id/tv_my_loc"
+            android:layout_width="wrap_content"
+            android:layout_height="26dp"
+            android:gravity="center_vertical"
+            android:text="正在获取位置"
+            android:textAppearance="@android:style/TextAppearance.Small"
+            android:textColor="@color/poi_detail_loc"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_title" />
+
+    </android.support.constraint.ConstraintLayout>
+
+    <View
+        style="@style/DividerCommon"
+        android:layout_marginLeft="@dimen/padding_size"
+        android:layout_marginRight="@dimen/padding_size" />
+
+    <LinearLayout
+        android:id="@+id/cl_root"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/padding_size"
+        android:paddingBottom="@dimen/padding_size">
+
+
+    </LinearLayout>
+
+</LinearLayout>

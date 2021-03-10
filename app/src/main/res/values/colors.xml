@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">@color/blue_color</color>
+    <color name="white">#FFFFFF</color>
+    <color name="gsp_loc_selected">#CCCCCC</color>
+    <color name="text_color_black">#2C2C2C</color>
+    <color name="transparent">#00000000</color>
+    <color name="color_gray">#989898</color>
+    <color name="title_color">#010101</color>
+    <color name="sub_title_color">#292929</color>
+    <color name="poi_detail_title">#070707</color>
+    <color name="poi_detail_loc">#3E3E3E</color>
+    <color name="gray_bg">#F4F4F4</color>
+    <color name="blue_color">#4287FF</color>
+    <!--Button color-->
+    <color name="btn_disable_normal">#B3CFFF</color>
+    <color name="btn_enable_normal">#DD4C6BFF</color>
+    <color name="btn_enable_pressed">#DD3D53FF</color>
+    <!--登录Button颜色-->
+    <color name="btn_login_pressed_stroke">#CECECE</color>
+    <color name="btn_login_press_solid">#F2F2F2</color>
+    <color name="btn_login_normal_stroke">@color/blue_color</color>
+
+    <drawable name="transparent">#00000000</drawable>
+    <color name="navpage">#FFE1E8EB</color>
+    <color name="toast_text_color">#F2F3F8</color>
+</resources>

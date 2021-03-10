@@ -1,0 +1,182 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <!--<item name="colorPrimaryDark">@color/colorPrimaryDark</item>-->
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <!--欢迎页主题样式-->
+    <style name="SplashTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <style name="MapTheme" parent="Theme.AppCompat.Light">
+        <!-- Customize your theme here. -->
+        <!--<item name="colorPrimary">@color/white</item>-->
+        <!--<item name="colorPrimaryDark">@color/colorPrimaryDark</item>-->
+        <!--<item name="colorAccent">@color/white</item>-->
+        <item name="windowNoTitle">true</item>
+        <!--<item name="android:windowIsTranslucent">true</item>-->
+        <!--<item name="android:statusBarColor">@color/white</item>-->
+    </style>
+
+    <!--输入框样式-->
+    <style name="EditTextStyle" parent="Widget.AppCompat.EditText">
+        <item name="android:background">@drawable/button_only_one_normal</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/input_height</item>
+        <item name="android:paddingLeft">@dimen/padding_size</item>
+        <item name="android:paddingRight">@dimen/padding_size</item>
+        <item name="android:textColor">@color/text_color_black</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="IconViewStyle">
+        <item name="android:layout_width">@dimen/icon_width</item>
+        <item name="android:layout_height">@dimen/icon_height</item>
+    </style>
+
+    <style name="TextLarge">
+        <item name="android:textSize">22sp</item>
+    </style>
+
+    <style name="DividerCommon">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1px</item>
+        <item name="android:background">@drawable/common_line</item>
+    </style>
+    <!--poi详情图片样式-->
+    <style name="PoiDetailIconStyle">
+        <item name="android:layout_width">18dp</item>
+        <item name="android:layout_height">18dp</item>
+    </style>
+
+    <style name="PoiDetailTextStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/poi_detail_loc</item>
+        <!--android:textAppearance="@android:style/TextAppearance.Small"-->
+        <item name="android:textAppearance">@android:style/TextAppearance.Small</item>
+    </style>
+
+    <style name="SettingItem">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:background">@color/white</item>
+    </style>
+
+    <style name="SettingItem.Large">
+        <item name="android:layout_height">@dimen/setting_item_large_height</item>
+    </style>
+    <!--固定在底部的布局样式-->
+    <style name="PoiDetailFixedStyle">
+        <item name="android:layout_height">@dimen/rect_height_medium</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:textColor">@color/poi_detail_loc</item>
+        <item name="android:drawablePadding">4dp</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:paddingLeft">14dp</item>
+        <item name="android:paddingRight">14dp</item>
+        <!-- android:textAppearance="@android:style/TextAppearance.Small"
+         android:textColor="@color/poi_detail_loc"-->
+    </style>
+
+    <!--顶部标题栏-->
+    <style name="TitleBarStyle">
+        <item name="android:layout_height">46dp</item>
+        <item name="android:background">@color/white</item>
+        <item name="android:layout_width">match_parent</item>
+    </style>
+    <!--登录Button样式-->
+    <style name="BtnLoginStyle" >
+        <item name="android:layout_height">@dimen/height_btn_large</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <!--dialog样式-->
+    <style name="BaseDialogTheme">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@drawable/transparent</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+
+    <!--TextView相关样式-->
+    <style name="BaseTextTheme">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+   <!--
+    阿里巴巴开发规范：
+    之所以文本大小也推荐使用 dp 而非 sp，因为 sp 是 Android 早期推荐使用的，但其
+    实 sp 不仅和 dp 一样受屏幕密度的影响，还受到系统设置里字体大小的影响，所以
+    使用 dp 对于应用开发会更加保证 UI 的一致性和还原度。
+    -->
+
+    <style name="BiggerTextTheme.BaseTextTheme" parent="BaseTextTheme">
+        <item name="android:textSize" tools:ignore="SpUsage">26dp</item>
+    </style>
+
+    <style name="BigTextTheme.BaseTextTheme" parent="BaseTextTheme">
+        <item name="android:textSize" tools:ignore="SpUsage">24dp</item>
+    </style>
+
+    <style name="LargerTextTheme.BaseTextTheme" parent="BaseTextTheme">
+        <item name="android:textSize" tools:ignore="SpUsage">22dp</item>
+    </style>
+
+    <style name="LargeTextTheme.BaseTextTheme" parent="BaseTextTheme">
+        <item name="android:textSize" tools:ignore="SpUsage">20dp</item>
+    </style>
+
+    <style name="MediumTextTheme.BaseTextTheme" parent="BaseTextTheme">
+        <item name="android:textSize" tools:ignore="SpUsage">18dp</item>
+    </style>
+
+    <style name="NormalTextTheme.BaseTextTheme" parent="BaseTextTheme">
+        <item name="android:textSize" tools:ignore="SpUsage">16dp</item>
+    </style>
+    <style name="SmallTextTheme.BaseTextTheme" parent="BaseTextTheme">
+        <item name="android:textSize" tools:ignore="SpUsage">14dp</item>
+    </style>
+
+    <style name="LittleTextTheme.BaseTextTheme" parent="BaseTextTheme">
+        <item name="android:textSize" tools:ignore="SpUsage">12dp</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <style name="MyTranslucentTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowTranslucentNavigation">false</item>
+        <item name="android:windowTranslucentStatus">false</item>
+        <!-- 设置statusBarColor 为透明-->
+        <item name="android:statusBarColor">@android:color/white</item>
+    </style>
+
+    <style name="MyTranslucentTheme2" parent="Theme.Design.Light.NoActionBar">
+        <item name="android:windowTranslucentNavigation">false</item>
+        <item name="android:windowTranslucentStatus">false</item>
+        <!-- 设置statusBarColor 为透明-->
+        <item name="android:statusBarColor">@android:color/white</item>
+    </style>
+
+    <!--微信相关-->
+    <style name="NavPage">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:gravity">center_horizontal</item>
+        <!-- <item name="android:background">@drawable/nav_page</item> -->
+        <item name="android:background">@color/navpage</item>
+    </style>
+
+</resources>
+

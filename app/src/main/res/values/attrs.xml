@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="BaseIconView">
+        <!--IconView最外面背景图片，可以是单个图片或者selector-->
+        <attr name="biv_background" format="reference|color" />
+        <!--IconView最背里面景图片，可以是单个图片或者selector-->
+        <attr name="biv_icon" format="reference|color" />
+    </declare-styleable>
+
+    <declare-styleable name="TopTitleView">
+        <attr name="ttvRightTitleVisiable" format="boolean" />
+        <!--drawble-->
+        <attr name="ttvRightIcon" format="reference" />
+        <attr name="ttvLeftIcon" format="reference" />
+        <!--View大小-->
+        <attr name="ttvLeftSize" format="dimension|reference" />
+        <attr name="ttvRightSize" format="dimension|reference" />
+        <!--右侧文字-->
+        <attr name="ttvRightText" format="string|reference" />
+        <attr name="ttvRightTextSize" format="dimension|reference" />
+        <attr name="ttvRightTextColor" format="color|reference" />
+        <!--中间文字-->
+        <attr name="ttvCenterText" format="string|reference" />
+        <attr name="ttvCenterTextSize" format="dimension|reference" />
+    </declare-styleable>
+
+    <!--SettingItemView-->
+    <declare-styleable name="SettingItemView">
+        <!--内容-->
+        <attr name="sivTitle" format="string|reference"/>
+        <!--是否显示-->
+        <attr name="sivTitleVisiable" format="boolean"/>
+        <!--文字大小-->
+        <attr name="sivTitleSize" format="dimension|reference"/>
+        <!--文字颜色-->
+        <attr name="sivTitleColor" format="color|reference"/>
+        <!--文字是否加粗-->
+        <attr name="sivTitleBlod" format="boolean"/>
+        <!--副标题-->
+        <attr name="sivSubtitle" format="string|reference"/>
+        <attr name="sivSubtitleVisiable" format="boolean"/>
+        <attr name="sivSubtitleSize" format="dimension|reference"/>
+        <!--右侧图片-->
+        <attr name="sivRightIvBackground" format="reference"/>
+        <attr name="sivRightIvVisiable" format="boolean"/>
+        <!--高度-->
+        <attr name="sivHeight" format="dimension|reference"/>
+        <!--checkbox是否显示-->
+        <attr name="sivCheckVisiable" format="boolean"/>
+        <!--checkbook选中状态-->
+        <attr name="sivChecked" format="boolean"/>
+        <!--箭头是否显示-->
+        <attr name="sivArrowVisiable" format="boolean"/>
+        <!--中间TextView-->
+        <attr name="sivCenterVisiable" format="boolean"/>
+        <attr name="sivCenterText" format="string|reference"/>
+        <attr name="sivCenterTextColor" format="color|reference"/>
+        <attr name="sivCenterTextSize" format="dimension|reference"/>
+    </declare-styleable>
+
+    <!--VerticalIconTextView-->
+    <declare-styleable name="VerticalIconTextView">
+        <!--图标-->
+        <attr name="vitIcon" format="reference"/>
+        <!--下部分文字内容-->
+        <attr name="vitTitle" format="string|reference"/>
+    </declare-styleable>
+</resources>

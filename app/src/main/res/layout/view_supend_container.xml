@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent">
+
+
+
+
+    <LinearLayout
+        android:id="@+id/gps_view_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:orientation="vertical"
+        app:layout_constraintLeft_toLeftOf="parent">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/padding_size"
+            android:layout_marginRight="@dimen/padding_size"
+            android:background="@color/transparent"
+            app:layout_constraintBottom_toTopOf="@id/nearby_view"
+            app:layout_constraintLeft_toLeftOf="parent">
+
+            <com.luohui.map.view.map.GPSView
+                android:id="@+id/gps_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@drawable/gps_loc_selector"
+                android:src="@drawable/icon_gps_unlocked" />
+
+            <com.luohui.map.view.map.RouteView
+                android:id="@+id/route_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true" />
+
+
+            <com.luohui.map.view.map.FrequentView
+                android:id="@+id/fv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true" />
+        </RelativeLayout>
+
+        <com.luohui.map.view.map.NearbySearchView
+            android:id="@+id/nearby_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/padding_size"
+            android:layout_marginRight="@dimen/padding_size"
+            android:layout_marginBottom="@dimen/padding_size"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+    </LinearLayout>
+
+    <include layout="@layout/poi_detail_bottom_sheet" />
+
+    <!--<include layout="@layout/poi_detail_fix_bottom" />-->
+    <com.luohui.map.view.map.PoiDetailBottomView
+        android:id="@+id/poi_detail_taxi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:visibility="gone" />
+
+    <!--search container-->
+    <LinearLayout
+        android:id="@+id/ll_search_container"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_height="match_parent"
+        android:background="@color/gray_bg"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:paddingLeft="@dimen/padding_size"
+            android:paddingTop="@dimen/padding_size"
+            android:paddingRight="@dimen/padding_size"
+            android:paddingBottom="@dimen/padding_size">
+
+            <ImageView
+                android:id="@+id/iv_search_left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/arrow_left_black" />
+
+            <EditText
+                android:id="@+id/et_search_tip"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/padding_size"
+                android:layout_toEndOf="@id/iv_search_left"
+                android:background="@drawable/search_rect_bg"
+                android:drawableStart="@drawable/search_light_icon"
+                android:drawablePadding="4dp"
+                android:hint="@string/search"
+                android:paddingLeft="@dimen/padding_size"
+                android:paddingTop="@dimen/padding_normal"
+                android:paddingRight="@dimen/padding_size"
+                android:paddingBottom="@dimen/padding_normal"
+                android:textSize="16dp" />
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                style="?android:attr/progressBarStyle"
+                android:visibility="gone"
+                android:layout_width="24dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/padding_small"
+                android:layout_height="24dp"
+                android:indeterminateDrawable="@drawable/progress_indeterminate" />
+
+
+        </RelativeLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_search"
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/padding_size" />
+
+    </LinearLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:visibility="visible"
+        android:layout_height="match_parent">
+
+        <com.luohui.map.view.map.MapHeaderView
+            android:id="@+id/mhv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/padding_size"
+            android:layout_marginTop="@dimen/padding_size"
+            android:layout_marginRight="@dimen/padding_size"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <include
+            layout="@layout/view_map_top_feedback"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <com.luohui.map.view.map.SupendPartitionView
+            android:id="@+id/spv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/padding_size"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/mhv"/>
+
+
+    </android.support.constraint.ConstraintLayout>
+
+
+</android.support.design.widget.CoordinatorLayout>
